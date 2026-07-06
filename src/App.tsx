@@ -1,5 +1,7 @@
+import { ProductList } from "@/features/products/components/ProductList";
+
 function App() {
-  return <h1>Inicio</h1>;
+  return <ProductList />;
 }
 
 export default App;
