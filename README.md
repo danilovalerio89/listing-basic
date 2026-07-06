@@ -1,77 +1,88 @@
-# React + TypeScript + Vite
+# Basic Listing
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple project built to demonstrate my approach to structuring modern front-end applications.
 
-Currently, two official plugins are available:
+The goal of this repository is **not** to build a production-ready application, but to showcase clean architecture, component organization, scalability, and development best practices using a modern React stack.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
 
-## React Compiler
+- React
+- TypeScript
+- Vite
+- Chakra UI
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## What this project demonstrates
 
-Note: This will impact Vite dev & build performances.
+- Feature-based folder structure
+- Reusable and composable components
+- Type-safe development with TypeScript
+- Separation of concerns
+- API integration
+- Responsive UI
+- Clean and maintainable code
+- Consistent naming conventions
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```text
+src/
+├── components/
+├── hooks/
+├── services/
+├── types/
+├── utils/
+├── pages/
+└── App.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The folder structure is intentionally simple while remaining scalable enough for larger applications.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Why this repository exists
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+This project serves as a small showcase of how I organize front-end projects.
 
+Rather than focusing on advanced business logic or a large feature set, the emphasis is on:
+
+- Readable code
+- Maintainability
+- Reusability
+- Scalability
+- Developer experience
+
+These are the same principles I follow when building production applications.
+
+## Getting Started
+
+Clone the repository:
+
+```bash
+git clone git@github.com:danilovalerio89/listing-basic.git
 ```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+## Future Improvements
+
+Although intentionally simple, this project could be expanded with features such as:
+
+- Unit tests
+- End-to-end tests
+- Dark mode
+- Pagination
+- Search and filtering
+- State management
+- Performance optimizations
+
+---
+
+Created as a portfolio project to demonstrate code quality, project organization, and front-end development practices.
