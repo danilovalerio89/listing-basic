@@ -18,4 +18,7 @@ const mockProducts: Product[] = [
   { id: 52, name: "Headphones", category: "Accessories", price: 15 },
 ];
 
-export default mockProducts;
+export const productService = {
+  // Fake API
+  getProducts: (): Product[] => mockProducts,
+};
